@@ -54,7 +54,7 @@ const Hero = () => {
             <div style={{ position: 'relative', width: '300px', height: '300px', maxWidth: '100%' }}>
               <div style={{ position: 'absolute', inset: -10, borderRadius: '50%', background: 'var(--accent-gradient)', opacity: 0.4, filter: 'blur(30px)' }} />
               <img
-                src="/public/profile.jpeg"
+                src="/profile.jpeg"
                 alt="Arouna BARRY Portfolio"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%', border: '4px solid var(--bg-card)', position: 'relative', zIndex: 2, }}
               />
