@@ -90,10 +90,10 @@ const CV = () => {
 
       {/* Main Content */}
       <div style={{ display: 'grid', gridTemplateColumns: '2fr 4fr', height: 'calc(296mm - 96px)' }}>
-        
+
         {/* Left Sidebar */}
         <div style={{ background: '#f8fafc', padding: '24px 20px', borderRight: '1px solid #e2e8f0', display: 'block' }}>
-          
+
           <div className="cv-section">
             <h3 className="cv-heading">Profil</h3>
             <p style={{ fontSize: '13px', color: '#475569', textAlign: 'justify', lineHeight: 1.5 }}>
@@ -103,7 +103,7 @@ const CV = () => {
 
           <div className="cv-section">
             <h3 className="cv-heading">Compétences</h3>
-            
+
             <div style={{ marginBottom: '12px' }}>
               <strong style={{ display: 'block', fontSize: '13px', color: '#1e293b' }}>Langages</strong>
               <div style={{ fontSize: '12px', color: '#475569', marginTop: '2px' }}>Python, Java, JS, TS, PHP, C#</div>
@@ -135,12 +135,12 @@ const CV = () => {
           <div className="cv-section">
             <h3 className="cv-heading">Certifications</h3>
             <div style={{ marginBottom: '12px' }}>
-              <div style={{ fontSize: '12px', color: '#1e293b', fontWeight: '600' }}>IBM Data Science Professional</div>
-              <div style={{ fontSize: '11px', color: '#64748b', marginTop: '2px' }}>Coursera, 2024</div>
+              <div style={{ fontSize: '12px', color: '#1e293b', fontWeight: '600' }}>MIABE HACKATHON, 2024</div>
+              <div style={{ fontSize: '11px', color: '#64748b', marginTop: '2px' }}>IAI WebJam, 2025 </div>
             </div>
             <div>
-              <div style={{ fontSize: '12px', color: '#1e293b', fontWeight: '600' }}>Scrum Fundamentals</div>
-              <div style={{ fontSize: '11px', color: '#64748b', marginTop: '2px' }}>SCRUMstudy, 2023</div>
+              <div style={{ fontSize: '12px', color: '#1e293b', fontWeight: '600' }}>Miabe Hackathon </div>
+              <div style={{ fontSize: '11px', color: '#64748b', marginTop: '2px' }}>IAI-TOGO </div>
             </div>
           </div>
 
@@ -160,10 +160,10 @@ const CV = () => {
 
         {/* Right Content */}
         <div style={{ padding: '24px 32px', display: 'block' }}>
-          
+
           <div className="cv-section">
             <h3 className="cv-heading">Expériences & Pratiques</h3>
-            
+
             <div className="cv-item">
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '4px' }}>
                 <strong style={{ fontSize: '14px', color: '#1e293b' }}>Développeur Fullstack Data (Stagiaire)</strong>
@@ -192,14 +192,14 @@ const CV = () => {
 
           <div className="cv-section">
             <h3 className="cv-heading">Projets Majeurs</h3>
-            
+
             <div className="cv-item">
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '4px' }}>
                 <strong style={{ fontSize: '14px', color: '#1e293b' }}>Plateforme Arascope</strong>
                 <span style={{ fontSize: '11px', color: '#0ea5e9', fontWeight: '700', background: '#e0f2fe', padding: '2px 8px', borderRadius: '4px' }}>HTML / CSS / JS / API</span>
               </div>
               <div style={{ fontSize: '13px', color: '#334155', lineHeight: 1.5 }}>
-                Plateforme web innovante de découverte patrimoniale. Création d'une interface UX/UI fluide avec des algorithmes de recommandation géographique des lieux touristiques.<br/>
+                Plateforme web innovante de découverte patrimoniale. Création d'une interface UX/UI fluide avec des algorithmes de recommandation géographique des lieux touristiques.<br />
                 <span style={{ color: '#0ea5e9', fontWeight: '600', display: 'block', marginTop: '4px' }}>&rarr; Impact : Facilite l'accès à l'information et valorise l'attractivité touristique locale avec succès.</span>
               </div>
             </div>
@@ -210,37 +210,37 @@ const CV = () => {
                 <span style={{ fontSize: '11px', color: '#0ea5e9', fontWeight: '700', background: '#e0f2fe', padding: '2px 8px', borderRadius: '4px' }}>React / Node.js / SQL</span>
               </div>
               <div style={{ fontSize: '13px', color: '#334155', lineHeight: 1.5 }}>
-                Dashboard analytique sécurisé traitant des flux B2B. L'interface permet un suivi instantané des inventaires massifs et inclut une modélisation d'analyse prédictive.<br/>
+                Dashboard analytique sécurisé traitant des flux B2B. L'interface permet un suivi instantané des inventaires massifs et inclut une modélisation d'analyse prédictive.<br />
                 <span style={{ color: '#0ea5e9', fontWeight: '600', display: 'block', marginTop: '4px' }}>&rarr; Impact : Réduction de 30% des ruptures de stock grâce à l'anticipation algorithmique.</span>
               </div>
             </div>
 
-            <div className="cv-item">
+            {/* <div className="cv-item">
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '4px' }}>
                 <strong style={{ fontSize: '14px', color: '#1e293b' }}>HealthTrack Data System</strong>
                 <span style={{ fontSize: '11px', color: '#0ea5e9', fontWeight: '700', background: '#e0f2fe', padding: '2px 8px', borderRadius: '4px' }}>Angular / Django REST</span>
               </div>
               <div style={{ fontSize: '13px', color: '#334155', lineHeight: 1.5 }}>
-                Système d'information rigoureusement structuré conçu pour les cadres de santé (centralisation chiffrée, gestion avancée de rendez-vous, traçabilité des admissions).<br/>
+                Système d'information rigoureusement structuré conçu pour les cadres de santé (centralisation chiffrée, gestion avancée de rendez-vous, traçabilité des admissions).<br />
                 <span style={{ color: '#0ea5e9', fontWeight: '600', display: 'block', marginTop: '4px' }}>&rarr; Impact : Optimisation du flux des admissions et respect strict des règles de sécurité des données.</span>
               </div>
-            </div>
+            </div> */}
 
           </div>
 
           <div className="cv-section">
             <h3 className="cv-heading">Formation Académique</h3>
-            
+
             <div style={{ padding: '12px 16px', background: '#f8fafc', borderRadius: '8px', borderLeft: '4px solid #0ea5e9' }}>
-               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                 <strong style={{ fontSize: '14px', color: '#1e293b' }}>Cycle Ingénieur Travaux Informatiques</strong>
-                 <span style={{ fontSize: '12px', color: '#64748b', fontWeight: '600' }}>2023 - 2026</span>
-               </div>
-               <div style={{ fontSize: '13px', color: '#0ea5e9', fontWeight: '600', marginTop: '4px' }}>Institut Africain d'Informatique (IAI) - Togo</div>
-               <p style={{ margin: '6px 0 0 0', fontSize: '13px', color: '#475569', lineHeight: 1.5 }}>
-                 <strong>Spécialité :</strong> Génie Logiciel, Maths Appliquées et Systèmes d'Information.<br/> 
-                 Acquisition de méthodologies avancées d'analyse (UML / Merise), Big Data, Bases de Données (SQL / NoSQL), architectures logicielles distribuées (Cloud).
-               </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <strong style={{ fontSize: '14px', color: '#1e293b' }}>Cycle Ingénieur Travaux Informatiques</strong>
+                <span style={{ fontSize: '12px', color: '#64748b', fontWeight: '600' }}>2023 - 2026</span>
+              </div>
+              <div style={{ fontSize: '13px', color: '#0ea5e9', fontWeight: '600', marginTop: '4px' }}>Institut Africain d'Informatique (IAI) - Togo</div>
+              <p style={{ margin: '6px 0 0 0', fontSize: '13px', color: '#475569', lineHeight: 1.5 }}>
+                <strong>Spécialité :</strong> Génie Logiciel, Maths Appliquées et Systèmes d'Information.<br />
+                Acquisition de méthodologies avancées d'analyse (UML / Merise), Big Data, Bases de Données (SQL / NoSQL), architectures logicielles distribuées (Cloud).
+              </p>
             </div>
           </div>
 
