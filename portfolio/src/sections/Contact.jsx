@@ -4,6 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import SectionTitle from '../components/SectionTitle';
 import Button from '../components/Button';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -11,8 +12,22 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Message envoyé avec succès ! (Simulation)');
-    setFormData({ name: '', email: '', message: '' });
+
+    emailjs.send(
+      'service_vq3dr4z',   // ✅ ton Service ID
+      'template_x3270va',  // ✅ ton Template ID
+      {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      },
+      'YQ8fQ18w_04sLjJC8'  // ✅ ta clé publique
+    ).then(() => {
+      alert('Message envoyé avec succès !');
+      setFormData({ name: '', email: '', message: '' });
+    }).catch((error) => {
+      alert('Erreur lors de l\'envoi : ' + error.text);
+    });
   };
 
   const handleChange = (e) => {
@@ -39,8 +54,9 @@ const Contact = () => {
         <SectionTitle title={t('contact.title')} subtitle="05." />
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem' }}>
-          
-          <motion.div 
+
+          {/* Bloc infos */}
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -84,7 +100,8 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          <motion.form 
+          {/* Formulaire */}
+          <motion.form
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -94,44 +111,38 @@ const Contact = () => {
           >
             <div>
               <label htmlFor="name" style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--text-muted)', fontSize: '0.875rem' }}>{t('contact.name')}</label>
-              <input 
-                type="text" 
-                id="name" 
-                name="name" 
-                value={formData.name} 
-                onChange={handleChange} 
-                required 
-                style={inputStyle} 
-                onFocus={(e) => e.target.style.borderColor = 'var(--accent-primary)'}
-                onBlur={(e) => e.target.style.borderColor = 'var(--bg-card-border)'}
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                style={inputStyle}
               />
             </div>
             <div>
               <label htmlFor="email" style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--text-muted)', fontSize: '0.875rem' }}>{t('contact.email')}</label>
-              <input 
-                type="email" 
-                id="email" 
-                name="email" 
-                value={formData.email} 
-                onChange={handleChange} 
-                required 
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
                 style={inputStyle}
-                onFocus={(e) => e.target.style.borderColor = 'var(--accent-primary)'}
-                onBlur={(e) => e.target.style.borderColor = 'var(--bg-card-border)'}
               />
             </div>
             <div>
               <label htmlFor="message" style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--text-muted)', fontSize: '0.875rem' }}>{t('contact.message')}</label>
-              <textarea 
-                id="message" 
-                name="message" 
-                value={formData.message} 
-                onChange={handleChange} 
-                required 
-                rows={4} 
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows={4}
                 style={{ ...inputStyle, resize: 'vertical' }}
-                onFocus={(e) => e.target.style.borderColor = 'var(--accent-primary)'}
-                onBlur={(e) => e.target.style.borderColor = 'var(--bg-card-border)'}
               />
             </div>
             <Button type="submit" variant="primary" icon={Send} className="w-full justify-center">
